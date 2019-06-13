@@ -1,4 +1,6 @@
 #ifdef RDRAND_FUNC_H
+#error Already included
+#else
 #define RDRAND_FUNC_H
 
 extern "C" void rdrand_func1(size_t *pOut);
