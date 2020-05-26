@@ -11,4 +11,6 @@ all:
 	$(AS) rdrand_func_windows.S ${ASFLAGS64} -o rdrand_func_windows.o
 	$(AS) rdrand_func_linux.S ${ASFLAGS64} -o rdrand_func_linux.o
 	$(CXX) -c rdrand_func1.cpp -o rdrand_func1.o $(CXXFLAGS)
-	@echo "No errors"
+
+linux:
+	$(CXX) rdrand_func1.o rdrand_func_linux.o -o rdrand_func1
