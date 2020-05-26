@@ -16,6 +16,10 @@ all:
 	$(CXX) -c rdrand_func16.cpp -o rdrand_func16.o $(CXXFLAGS)
 	$(CXX) -c rdrand_func32.cpp -o rdrand_func32.o $(CXXFLAGS)
 	$(CXX) -c rdrand_func64.cpp -o rdrand_func64.o $(CXXFLAGS)
+	$(CXX) -c rdrand_func128.cpp -o rdrand_func128.o $(CXXFLAGS)
+	$(CXX) -c rdrand_func256.cpp -o rdrand_func256.o $(CXXFLAGS)
+	$(CXX) -c rdrand_func512.cpp -o rdrand_func512.o $(CXXFLAGS)
+	$(CXX) -c rdrand_func1024.cpp -o rdrand_func1024.o $(CXXFLAGS)
 
 linux:
 	$(CXX) rdrand_func1.o rdrand_func_linux.o -o rdrand_func1
@@ -24,3 +28,7 @@ linux:
 	$(CXX) rdrand_func16.o rdrand_func_linux.o -o rdrand_func16
 	$(CXX) rdrand_func32.o rdrand_func_linux.o -o rdrand_func32
 	$(CXX) rdrand_func64.o rdrand_func_linux.o -o rdrand_func64
+	$(CXX) rdrand_func128.o rdrand_func_linux.o -o rdrand_func128
+	$(CXX) rdrand_func256.o rdrand_func_linux.o -o rdrand_func256
+	$(CXX) rdrand_func512.o rdrand_func_linux.o -o rdrand_func512
+	$(CXX) rdrand_func1024.o rdrand_func_linux.o -o rdrand_func1024
