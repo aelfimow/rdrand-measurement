@@ -45,7 +45,7 @@ try
         std::cerr << "Supported numbers:" << std::endl;
         for (auto &f: factory)
         {
-            std::cerr << f->first << std::endl;
+            std::cerr << f.first << std::endl;
         }
         throw std::invalid_argument("Wrong number of random numbers");
     }
